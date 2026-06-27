@@ -1,8 +1,5 @@
 import './App.css'
 
-// ── Add your photo path here, e.g. '/photo.jpg' ──
-const PHOTO_SRC = ''
-
 export default function App() {
   return (
     <div className="paper">
@@ -56,14 +53,16 @@ export default function App() {
         {/* Left: photo + pull quote only (Wire Dispatch removed) */}
         <aside className="col">
           <div className="photo-frame">
-            {PHOTO_SRC ? (
-              <img src={PHOTO_SRC} alt="Aditya Verma" id="profile-photo" />
-            ) : (
-              <div className="photo-placeholder">
-                <span>PHOTOGRAPH</span>
-                <small>— to be provided —</small>
-              </div>
-            )}
+            <div className="moving-photo-wrap">
+              <video
+                src="/Wizard-video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="moving-photo-video"
+              />
+            </div>
             <div className="photo-caption">
               Mr. Aditya Verma · Special Correspondent<br />
               Rajpura Bureau · Procol Division
