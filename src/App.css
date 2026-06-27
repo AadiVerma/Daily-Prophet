@@ -1,0 +1,468 @@
+/* ── Tokens ── */
+:root {
+  --ink: #0D0800;
+  --parchment: #EDE0A8;
+  --crimson: #7A1515;
+  --gold: #A07820;
+  --off-white: #F6EDD5;
+  --serif: Georgia, 'Times New Roman', Times, serif;
+  --display: Impact, 'Arial Narrow', 'Haettenschweiler', 'Arial Unicode MS', sans-serif;
+  --mono: 'Courier New', Courier, monospace;
+}
+
+/* ── Page wrapper ── */
+.paper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 28px 36px 56px;
+}
+
+/* ══════════════════════════════
+   MASTHEAD
+══════════════════════════════ */
+.masthead {
+  text-align: center;
+  border-top: 5px solid var(--ink);
+  padding-top: 8px;
+}
+.masthead-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+.masthead-title {
+  font-family: var(--serif);
+  font-size: 4.2rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-shadow: 3px 3px 0 rgba(13, 8, 0, 0.22);
+  line-height: 1;
+  margin-bottom: 7px;
+}
+.masthead-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--crimson);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.masthead-footer-strip {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--gold);
+  padding-top: 5px;
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════
+   RULES
+══════════════════════════════ */
+.rule-thick {
+  border: none;
+  border-top: 5px solid var(--ink);
+  margin: 10px 0 0;
+}
+.rule-double {
+  height: 6px;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin: 0 0 18px;
+}
+.rule-thin {
+  border: none;
+  border-top: 1px solid var(--ink);
+  margin: 12px 0;
+}
+.rule-gold {
+  border: none;
+  border-top: 1px solid var(--gold);
+  margin: 8px 0;
+}
+
+/* ══════════════════════════════
+   LEAD SECTION
+══════════════════════════════ */
+.lead-section {
+  padding-bottom: 14px;
+  text-align: center;
+}
+.kicker {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 6px;
+}
+.lead-headline {
+  font-family: var(--display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.02;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  text-wrap: balance;
+  text-align: center;
+}
+.deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.48;
+  color: var(--ink);
+  text-align: center;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding: 8px 24px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════
+   COLUMN BANDS
+══════════════════════════════ */
+.band-profile {
+  display: grid;
+  grid-template-columns: 230px 1px 1fr 26px;
+  gap: 0;
+  align-items: start;
+}
+.col-divider {
+  background: var(--ink);
+  align-self: stretch;
+}
+.col {
+  padding: 0 16px;
+}
+.col:first-child {
+  padding-left: 0;
+}
+.col:last-child {
+  padding-right: 0;
+}
+
+/* ══════════════════════════════
+   PHOTO FRAME
+══════════════════════════════ */
+.photo-frame {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.photo-frame img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--ink);
+}
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: transparent;
+  border: 1.5px dashed var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.5;
+}
+.photo-placeholder small {
+  font-size: 0.56rem;
+}
+.photo-caption {
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  text-align: center;
+  color: var(--ink);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* ══════════════════════════════
+   PULL QUOTE
+══════════════════════════════ */
+.pull-quote {
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 9px 8px;
+  margin: 0;
+}
+.pull-quote blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 5px;
+}
+.pull-quote cite {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.06em;
+  color: var(--crimson);
+  text-align: right;
+}
+
+/* ══════════════════════════════
+   ARTICLE PROSE
+══════════════════════════════ */
+.byline {
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.66;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--ink);
+  margin-bottom: 9px;
+}
+
+/* Drop cap — lead article only — the "A" of "Aditya" */
+.lead-prose p:first-of-type::first-letter {
+  font-family: var(--display);
+  font-size: 6.5em;
+  font-weight: 900;
+  float: left;
+  line-height: 0.70;
+  margin: 4px 8px 0 0;
+  color: var(--ink);
+}
+
+/* Real 2-column newspaper flow inside the Procol article */
+.article-columns {
+  column-count: 2;
+  column-gap: 22px;
+  column-rule: 1px solid var(--ink);
+}
+.article-columns .inset-head {
+  column-span: all;
+  font-size: 1.55rem;
+  margin: 18px 0 6px;
+  border-top: 2px solid var(--ink);
+}
+
+/* Achievements band below main article */
+.achievements-band {
+  padding-bottom: 10px;
+}
+.achievements-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 28px;
+  margin-top: 8px;
+}
+
+
+/* In-article sub-headlines — Impact, big and black */
+.inset-head {
+  font-family: var(--display);
+  font-size: 1.18rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  border-top: 1.5px solid var(--ink);
+  padding-top: 8px;
+  margin: 14px 0 4px;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+/* Sidebar-scale headlines */
+.sidebar-head {
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  padding-top: 6px;
+  margin: 12px 0 5px;
+  line-height: 1.1;
+}
+
+/* Vertical rotated label (like "SAYS THE" in Daily Prophet) */
+.vertical-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: var(--display);
+  font-size: 1.28rem;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  text-transform: uppercase;
+  border-right: 2px solid var(--ink);
+  padding-right: 5px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ══════════════════════════════
+   SECTION BANNER
+══════════════════════════════ */
+.section-banner {
+  text-align: center;
+  margin: 22px 0 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.section-banner::before,
+.section-banner::after {
+  content: '';
+  flex: 1;
+  border-top: 2px solid var(--ink);
+}
+.section-banner-inner {
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 5px 20px;
+  flex-shrink: 0;
+}
+.section-banner-text {
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+}
+
+/* ══════════════════════════════
+   EDUCATION
+══════════════════════════════ */
+.edu-box {
+  margin-bottom: 10px;
+}
+.edu-school {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.edu-degree {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.edu-grade {
+  font-family: var(--serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.edu-date {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--crimson);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+/* ══════════════════════════════
+   ACHIEVEMENTS
+══════════════════════════════ */
+.achievement {
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.achievement::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--gold);
+  font-size: 0.6rem;
+}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+.paper-footer {
+  border-top: 4px double var(--ink);
+  margin-top: 22px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-wire {
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.footer-credit {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.67rem;
+  color: var(--crimson);
+}
+
+/* ══════════════════════════════
+   ANIMATION
+══════════════════════════════ */
+@media (prefers-reduced-motion: no-preference) {
+  .band-profile {
+    animation: fadeUp 0.5s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(7px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ══════════════════════════════
+   PRINT
+══════════════════════════════ */
+@media print {
+  body { background: white; }
+  body::before { display: none; }
+  .paper { padding: 12px; }
+}
